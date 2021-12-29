@@ -1,16 +1,18 @@
-# This is a sample Python script.
+import tweepy as tw
+from pandas import DataFrame
+import sys
+sys.path.append('../')
+from Final_project.tweetload import downloadData, dictionary_downloader, api_getter,page_analyzer,my_specific_dictionary
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    with open("food_brands") as file:
+        companies = file.readlines()
+        companies = [line.rstrip() for line in companies]
+
+
+    dictionar = set(my_specific_dictionary())
+    print(dictionar)
+import re
+
+
