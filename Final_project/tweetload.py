@@ -60,16 +60,7 @@ def dictionary_downloader(link):
     return soup.get_text()
 
 
-def api_getter():
-    import tweepy as tw
-    consumer_key = 'Z1IMMbLAD2QyZ3GBKoBSFpYvt'
-    consumer_secret = 'hW87sK80ZfmedsXmvDbHGxsY5aJik9r3ezw5P3oSE5tPh9Ugoc'
-    access_token = '1350473122944856068-ErfdzZsziKFKpt5Gy3gh8p2PtxAiTU'
-    access_token_secret = 'mp0xj17bVS865YsH0Z0qHdYUnLIQPXSZSpv7AzQzkGPgN'
-    auth = tw.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
-    api = tw.API(auth, wait_on_rate_limit=True)
-    return api
+
 
 
 def page_analyzer(page, words_list):
